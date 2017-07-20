@@ -19,7 +19,7 @@ from wordcloud import WordCloud # biblioteca que cria nuvens de palavras
 with open('your_file.txt', 'r') as f, open('your_new_file_without_stopwords.txt','w') as outnew:
 	for line in f.readlines():
 	    print(" ".join([word for word in line.lower().translate(str.maketrans('', '', string.punctuation)).split() 
-        	if len(word) >=4 and word not in stopwords.words('portuguese')]), file=outnew)
+        	if word not in stopwords.words('portuguese')]), file=outnew)
 
 # Abre o novo arquivo gerado e cria um dataframe com o pandas
 infile = open('your_new_file_without_stopwords.txt', 'r')
