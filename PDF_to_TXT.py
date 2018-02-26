@@ -1,6 +1,6 @@
-''
+"""
 esse script utiliza o python 2.7
-''
+"""
 
 from cStringIO import StringIO
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
